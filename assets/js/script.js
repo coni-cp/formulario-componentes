@@ -1,28 +1,41 @@
-// Contenido dinámico
-/* let modal = document.getElementById('miModal')
-
-modal.addEventListener('show.bs.modal', function(event){
-    // reconozco el botón que activa el evento
-    let boton = event.relatedTarget
-    // genero instancia para leer el atributo del botón
-    console.log(boton.getAttribute('data-bs-encabezado'))
-    
-    document.querySelector('.modal-body').innerHTML = boton.getAttribute('data-bs-encabezado')
-    document.querySelector('.modal-title').textContent = boton.getAttribute('data-bs-titulo')
-    //document.querySelector('.modal-header').classList.add(boton.getAttribute('data-bs-clase'))
-    let modalHeader = document.querySelector('.modal-header')
-    modalHeader.classList.add('text-white')
-    modalHeader.classList.add(boton.getAttribute('data-bs-clase'))
-})
 
 
-modal.addEventListener('hide.bs.modal', function(event){
-    let modalHeader = document.querySelector('.modal-header')
-    if(modalHeader.classList.contains('bg-primary') || modalHeader.classList.contains('bg-danger') || modalHeader.classList.contains('bg-warning')|| modalHeader.classList.contains('bg-success') || modalHeader.classList.contains('bg-secundary')){
-        modalHeader.classList.remove('bg-primary')
-        modalHeader.classList.remove('bg-danger')
-        modalHeader.classList.remove('bg-warning')
-        modalHeader.classList.remove('bg-success') 
-        modalHeader.classList.remove('bg-secundary')
-    }
-}) */
+//sacando el valor de los inputs
+let nombre = document.getElementById('nombre').value;
+let apodo = document.getElementById('apodo').value;
+let listado = document.getElementsByClassName('checkbox').value;
+
+
+
+
+    const popoverTrigger = document.getElementById('edadPopover');
+
+    // Inicializa el popover vacío (o con contenido inicial)
+    let popoverInstance = new bootstrap.Popover(popoverTrigger, {
+        content: "Aquí aparecerá tu edad",
+        title: "Datos"
+    });//buscar 
+
+    popoverTrigger.addEventListener('click', function () {
+        // Obtener valor edad actualizado
+        let edad = document.getElementById('edad').value;
+
+        // Destruir popover viejo
+        popoverInstance.dispose();
+
+        // Actualizar atributo data-bs-content (opcional, para mantener el atributo actualizado)
+        popoverTrigger.setAttribute('data-bs-content', edad || "No hay edad");
+
+        // Crear uno nuevo con contenido actualizado
+        popoverInstance = new bootstrap.Popover(popoverTrigger, {
+            title: "Tu edad es",
+            content: edad || "No ingresaste ningun dato"
+        });
+
+        // Mostrar popover manualmente
+        popoverInstance.show();
+    });
+
+
+
+
