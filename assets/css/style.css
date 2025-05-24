@@ -1,0 +1,6 @@
+
+.popover-header {
+  background-color: #0d6efd; /* Fondo (azul Bootstrap por defecto) */
+  color: white;              /* Texto blanco */
+  font-weight: bold;
+}
