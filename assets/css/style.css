@@ -1,6 +1,19 @@
 
 .popover-header {
-  background-color: #0d6efd; /* Fondo (azul Bootstrap por defecto) */
+  background-color: #00000082; /* Fondo (azul Bootstrap por defecto) */
   color: white;              /* Texto blanco */
   font-weight: bold;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  color: white;
+  display: inline-block; /* Esto hace que el div se ajuste al contenido *//
+}
+
+h5{
+  font-size: 40px;
+}
+p{
+  font-size: 25px;
 }
