@@ -1,19 +1,57 @@
 
+.navbar{
+  background-color: #fcf7f5;
+}
+.btn-primary {
+  background-color: #f17c46 !important;
+  border-color: #f3a683 !important;
+  color: white !important;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #f17c46 !important;
+  border-color: #f17c46 !important;
+}
+
+.btn-primary:active {
+  background-color: #e15f20 !important;
+  border-color: #e15f20 !important;
+  box-shadow: none !important;
+  transform: scale(0.98); /* efecto "hundido" opcional */
+}
+
 .popover-header {
-  background-color: #00000082; /* Fondo (azul Bootstrap por defecto) */
-  color: white;              /* Texto blanco */
+  background-color: #00000082; /* Fondo */
+  color: white;              
   font-weight: bold;
 }
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  /* background-color: rgba(39, 39, 39, 0.452); */
   color: white;
-  display: inline-block; /* Esto hace que el div se ajuste al contenido *//
 }
-
+.toast-header{
+  background-color: #f17c46;
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+}
+.toast-body{
+  font-size: 14px;
+  font-weight: 500;
+}
 h5{
-  font-size: 40px;
+  font-size: 35px;
 }
 p{
   font-size: 25px;
+}
+.offcanvas-body li{
+  margin: 10px;
+
+}
+.offcanvas-header{
+  background-color: #f1c7b4;
 }

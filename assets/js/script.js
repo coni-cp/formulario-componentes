@@ -29,7 +29,7 @@ const alertTrigger = document.getElementById('liveAlertBtn')
 if (alertTrigger) { 
   alertTrigger.addEventListener('click', () => {
     let apodo = document.getElementById('apodo').value;
-    appendAlert('Hola, ' + apodo, 'info')
+    appendAlert('Hola, ' + apodo, 'warning')
   })
 }
 
@@ -42,8 +42,7 @@ if (alertTrigger) {
     let edad = document.getElementById('edad').value;
 
     popover.setContent({
-        '.popover-header': 'Tu edad es:',
-        '.popover-body': ` ${edad}`
+        '.popover-body': ` Tienes ${edad} años`
     });
 });
 
@@ -67,7 +66,6 @@ resumen.addEventListener('show.bs.offcanvas', function () {
         });
 
     document.querySelector('.offcanvas-body').innerHTML = `
-      <hr>
       <ul style="list-style-type: none; padding-left: 0;">
         <li>👤 Nombre: ${nombre}</li>
         <li>🏷️ Apodo: ${apodo}</li>
